@@ -1,0 +1,28 @@
+{
+  "name": "pi-rust-ext",
+  "version": "0.1.0",
+  "description": "Pi extension that makes the coding agent write all new code in Rust by default, with /rustoff and /ruston to toggle it",
+  "keywords": [
+    "pi-package",
+    "pi",
+    "extension",
+    "rust"
+  ],
+  "license": "MIT",
+  "author": "Sebastian Burmester",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ripmav/pi-rust-ext.git"
+  },
+  "files": [
+    "rust-default.ts"
+  ],
+  "pi": {
+    "extensions": [
+      "./rust-default.ts"
+    ]
+  },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*"
+  }
+}

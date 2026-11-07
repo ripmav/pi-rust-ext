@@ -5,7 +5,11 @@ is used only when you explicitly ask for one.
 
 ## Install
 
-Global (all projects):
+As a Pi package from npm:
+
+    pi install npm:pi-rust-ext
+
+Or manually — global (all projects):
 
     mkdir -p ~/.pi/agent/extensions
     cp rust-default.ts ~/.pi/agent/extensions/
@@ -38,6 +42,17 @@ default holds across turns without replacing the whole prompt.
 ## Remove
 
 Delete the file and run `/reload`.
+
+## Release
+
+Publishing is automated by GitHub Actions (`.github/workflows/publish.yml`).
+It runs on version tags (`v*`) or manually from the Actions tab:
+
+1. Bump `version` in `package.json` and commit.
+2. Tag and push: `git tag v0.1.0 && git push origin v0.1.0`
+
+The workflow needs an `NPM_TOKEN` secret (npm access token with publish
+access): repo Settings → Secrets and variables → Actions.
 
 ## License
 
